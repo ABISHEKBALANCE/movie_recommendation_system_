@@ -13,9 +13,9 @@ MovieRecommendation Sytem is your ultimate movie recommendation system, designed
 - **Sleek Interface:** Enjoy a seamless user experience with a modern and intuitive interface.
 - **Customizable Filters:** Fine-tune your search with customizable filters for genres, ratings, and more.
 - **Mobile-Friendly:** Access MovieBox on-the-go with its responsive design optimized for mobile devices.
-[preview](preview1.png)
-[preview](preview2.png)
-[preview](preview3.png)
+[preview](preview1.jpg)
+[preview](preview2.jpg)
+[preview](preview3.jpg)
 ## Installation
 
 Clone the repository to integrate MovieBox into your website and start providing personalized movie recommendations to your users.
