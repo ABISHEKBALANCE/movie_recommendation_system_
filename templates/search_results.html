@@ -1,0 +1,25 @@
+<!-- search_results.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<!-- search_results.html -->
+{% extends "base.html" %}
+
+  <!-- Your search_results.html content goes here -->
+  <!-- Integrated CSS and JS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+  <h2>Search Results</h2>
+  {% if results %}
+    <ul>
+      {% for movie in results %}
+        <li class="movie-result" data-movie-id="{{ movie.movieId }}">
+          {{ movie.title }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found. Please try another title.</p>
+  {% endif %}
+{% endblock %}

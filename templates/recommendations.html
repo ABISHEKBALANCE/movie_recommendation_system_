@@ -1,0 +1,23 @@
+<!-- recommendations.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<!-- recommendations.html -->
+  <!-- Your recommendations.html content goes here -->
+
+  <!-- Integrated CSS and JS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+  <h2>Recommended Movies</h2>
+  {% if recommendations %}
+    <ul>
+      {% for movie in recommendations %}
+        <li>
+          {{ movie.title }} - {{ movie.genres }} - Score: {{ movie.score }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No recommendations available.</p>
+  {% endif %}
+{% endblock %}

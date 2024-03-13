@@ -1,0 +1,134 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOVIE RECOMMENDATION SYSTEM</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <script src="{{ url_for('static', filename='index.js') }}" type="text/javascript"></script>
+</head>
+<body>
+  {% block content %}
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+      <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">MOVIE RECOMMENDATION SYSTEM.</td>
+                <td id="navigation">
+                    <a href="#work">GENRE</a>
+                    <a href="#bio">RATING</a>
+                    <a href="">YEAR</a>
+                    <a href="#contact">contact</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                <h1>Watch Something Learn Something</h1>
+                <button class="btn_one">Try Me</button><br>
+                <table>
+                    <tr>
+                        <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-instagram"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-dribbble"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:3.0s;"><a class="social"><i class="fab fa-medium"></i></a></td>
+                    </tr>
+                </table>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+    <div id="work">
+        <h1>Search</h1>
+        <form id="searchForm">
+          <input type="text" id="movieInput" placeholder="Enter movie title" required>
+          <button type="button" onclick="searchMovie()">Search</button>
+        </form>
+        <div id="movieDetails"></div>
+        <div id="recommendations"></div>
+    </div>
+    <div id="bio">
+        <h1>about</h1>
+        <p>
+            Welcome to our Movie Recommendation System! Whether you're a film enthusiast or just looking for something new to watch, we've got you covered. Use our search feature to find movies based on your preferences, and discover hidden gems you might have missed.
+        </p>
+        <p>
+            Explore the search results to find movies that match your interests. If you're unsure where to start, don't worry! Our system also provides personalized recommendations based on your selected movies. Check out the recommendations section to uncover exciting new titles that align with your taste.
+        </p>
+    </div>
+    <div id="contact">
+        <h1>contact</h1>
+        <table>
+            <tr>
+                <td>
+                    <div id="inner_div">
+                        <table id="inner_table">
+                            <tr>
+                                <td><i class="fas fa-phone"></i> &nbsp; +1 234 567 8910</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-at"></i> &nbsp; musicrec@email.com</td>
+                            </tr>
+                             <tr>
+                                <td><i class="fas fa-fax"></i> &nbsp; 1234567890</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-map-marker-alt"></i>
+                                <div id="address">
+                                    Street 123,<br>
+                                    this is city,<br>
+                                    this is country
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="social"><i class="fab fa-facebook"></i></a>
+                                    <a class="social"><i class="fab fa-twitter"></i></a>
+                                    <a class="social"><i class="fab fa-instagram"></i></a>
+                                    <a class="social"><i class="fab fa-dribbble"></i></a>
+                                    <a class="social"><i class="fab fa-medium"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <form>
+                        <input type="text" placeholder="name" required>
+                        <input type="email" placeholder="email" required><br>
+                        <textarea placeholder="your message" required rows="5"></textarea><br>
+                        <button class="btn_one">send</button>
+                    </form> 
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="footer">
+        copyright created by AP <br>
+    </div>
+{% endblock %}
+
+<script src="{{ url_for('static', filename='index.js') }}" type="text/javascript"></script>
+</body>
+</html>
+
+
