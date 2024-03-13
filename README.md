@@ -1,6 +1,6 @@
 # Movie_Recommendation_System-MovieBox
 
-![MovieBox Logo](logo.png)
+
 
 ## Overview
 
